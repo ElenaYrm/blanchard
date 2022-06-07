@@ -8,12 +8,13 @@
   <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon">
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
   <header class="header">
     <div class="header-top">
-      <div class="container">
+      <div class="container header-top__container">
         <div class="header-top__content">
           <button class="burger" aria-label="Открыть главное меню" aria-expanded="false">
             <span class="burger__line"></span>
@@ -76,7 +77,7 @@
       </div>
     </div>
     <div class="header-bottom">
-      <div class="container">
+      <div class="container header-bottom__container">
         <div class="header-bottom__content">
           <div class="menu">
             <ul class="menu__list list-reset">
@@ -101,7 +102,9 @@
                       </li>
                       <li class="dropdown__item">
                         <a href="#" class="dropdown__link dropdown__link--verrocchio">Верроккьо</a>
-                      </li>
+                      </li><li class="dropdown__item">
+                      <a href="#" class="dropdown__link">Верроккьо</a>
+                    </li>
                     </ul>
                   </div>
                 </div>
@@ -228,7 +231,26 @@
 
   <main>
     <section class="hero">
-
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide swiper-slide-1"></div>
+          <div class="swiper-slide swiper-slide-2"></div>
+          <div class="swiper-slide swiper-slide-3"></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="hero__content">
+          <h1 class="hero__title">
+            Прикоснитесь к&nbsp;прекрасному
+          </h1>
+          <p class="hero__descr">
+            Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
+          </p>
+          <a href="#" class="hero__link">
+            Подписаться на&nbsp;рассылку
+          </a>
+        </div>
+      </div>
     </section>
 
     <section class="about" id="about">
@@ -260,6 +282,7 @@
   </footer>
 
   <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="./js/script.js"></script>
 </body>
 </html>
