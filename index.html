@@ -1,13 +1,14 @@
 <!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Blanchard&nbsp;&mdash; художественная галерея</title>
-    <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon">
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Blanchard&nbsp;&mdash; художественная галерея</title>
+  <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
   <header class="header">
@@ -80,45 +81,146 @@
           <div class="menu">
             <ul class="menu__list list-reset">
               <li class="menu__item">
-                <button class="menu__btn btn-reset menu-text" data-path="one">Реализм</button>
-                <div class="dropdown" data-target="one">
-                  <ul class="dropdown__list list-reset">
-                    <li class="dropdown__item">
-                      <a href="#" class="dropdown__link">Тинторетто</a>
-                    </li>
-                    <li class="dropdown__item">
-                      <a href="#" class="dropdown__link">Фридрих</a>
-                    </li>
-                    <li class="dropdown__item">
-                      <a href="#" class="dropdown__link">Леонардо</a>
-                    </li>
-                    <li class="dropdown__item">
-                      <a href="#" class="dropdown__link">Верроккьо</a>
-                    </li>
-                  </ul>
+                <button class="tab btn-reset menu-text" aria-label="Открыть меню" aria-expanded="false">
+                  <span class="tab__name">Реализм</span>
+                  <svg class="tab__icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 1L6 6L1 1"/>
+                  </svg>
+                </button>
+                <div class="dropdown" aria-hidden="true">
+                  <div class="dropdown__content" data-simplebar>
+                    <ul class="dropdown__list list-reset">
+                      <li class="dropdown__item">
+                        <a href="#" class="dropdown__link dropdown__link--tintoretto">Тинторетто</a>
+                      </li>
+                      <li class="dropdown__item">
+                        <a href="#" class="dropdown__link dropdown__link--fridrih">Фридрих</a>
+                      </li>
+                      <li class="dropdown__item">
+                        <a href="#" class="dropdown__link dropdown__link--leonardo">Леонардо</a>
+                      </li>
+                      <li class="dropdown__item">
+                        <a href="#" class="dropdown__link dropdown__link--verrocchio">Верроккьо</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </li>
               <li class="menu__item">
-                <button class="menu__btn btn-reset menu-text" data-path="two">Импрессионизм</button>
-                <div class="dropdown" data-target="two">
-                  <ul class="dropdown__list list-reset">
-                    <li class="dropdown__item">
-                      <a href="#" class="dropdown__link">Моне</a>
-                    </li>
-                    <li class="dropdown__item">
-                      <a href="#" class="dropdown__link">Сислей</a>
-                    </li>
-                    <li class="dropdown__item">
-                      <a href="#" class="dropdown__link">Мане</a>
-                    </li>
-                    <li class="dropdown__item">
-                      <a href="#" class="dropdown__link">Ренуар</a>
-                    </li>
-                  </ul>
+                <button class="tab btn-reset menu-text" aria-label="Открыть меню" aria-expanded="false">
+                  <span class="tab__name">Импрессионизм</span>
+                  <svg class="tab__icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 1L6 6L1 1"/>
+                  </svg>
+                </button>
+                <div class="dropdown" aria-hidden="true">
+                  <div class="dropdown__content" data-simplebar>
+                    <ul class="dropdown__list list-reset">
+                      <li class="dropdown__item">
+                        <a href="#" class="dropdown__link dropdown__link--monet">Моне</a>
+                      </li>
+                      <li class="dropdown__item">
+                        <a href="#" class="dropdown__link dropdown__link--sisley">Сислей</a>
+                      </li>
+                      <li class="dropdown__item">
+                        <a href="#" class="dropdown__link dropdown__link--manet">Мане</a>
+                      </li>
+                      <li class="dropdown__item">
+                        <a href="#" class="dropdown__link dropdown__link--renoir">Ренуар</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="menu__item">
+                <button class="tab btn-reset menu-text" aria-label="Открыть меню" aria-expanded="false">
+                  <span class="tab__name">Постимпрессионизм</span>
+                  <svg class="tab__icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 1L6 6L1 1"/>
+                  </svg>
+                </button>
+                <div class="dropdown" aria-hidden="true">
+                  <div class="dropdown__content" data-simplebar>
+                    <ul class="dropdown__list list-reset">
+                      <li class="dropdown__item">
+                        <a href="#" class="dropdown__link dropdown__link--vanGogh">Ван Гог</a>
+                      </li>
+                      <li class="dropdown__item">
+                        <a href="#" class="dropdown__link dropdown__link--cezanne">Сезанн</a>
+                      </li>
+                      <li class="dropdown__item">
+                        <a href="#" class="dropdown__link dropdown__link--gauguin">Гоген</a>
+                      </li>
+                      <li class="dropdown__item">
+                        <a href="#" class="dropdown__link dropdown__link--seurat">Сёра</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="menu__item">
+                <button class="tab btn-reset menu-text" aria-label="Открыть меню" aria-expanded="false">
+                  <span class="tab__name">Авангард</span>
+                  <svg class="tab__icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 1L6 6L1 1"/>
+                  </svg>
+                </button>
+                <div class="dropdown" aria-hidden="true">
+                  <div class="dropdown__content" data-simplebar>
+                    <ul class="dropdown__list list-reset">
+                      <li class="dropdown__item">
+                        <a href="#" class="dropdown__link dropdown__link--kandinsky">Кандинский</a>
+                      </li>
+                      <li class="dropdown__item">
+                        <a href="#" class="dropdown__link dropdown__link--marinetti">Маринетти</a>
+                      </li>
+                      <li class="dropdown__item">
+                        <a href="#" class="dropdown__link dropdown__link--malevich">Малевич</a>
+                      </li>
+                      <li class="dropdown__item">
+                        <a href="#" class="dropdown__link dropdown__link--picasso">Пикассо</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="menu__item">
+                <button class="tab btn-reset menu-text" aria-label="Открыть меню" aria-expanded="false">
+                  <span class="tab__name">Футуризм</span>
+                  <svg class="tab__icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 1L6 6L1 1"/>
+                  </svg>
+                </button>
+                <div class="dropdown" aria-hidden="true">
+                  <div class="dropdown__content" data-simplebar>
+                    <ul class="dropdown__list list-reset">
+                      <li class="dropdown__item">
+                        <a href="#" class="dropdown__link dropdown__link--carra">Карра</a>
+                      </li>
+                      <li class="dropdown__item">
+                        <a href="#" class="dropdown__link dropdown__link--pratella">Прателла</a>
+                      </li>
+                      <li class="dropdown__item">
+                        <a href="#" class="dropdown__link dropdown__link--severini">Северини</a>
+                      </li>
+                      <li class="dropdown__item">
+                        <a href="#" class="dropdown__link dropdown__link--balla">Балла</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </li>
             </ul>
           </div>
+          <form class="find" action="https://jsonplaceholder.typicode.com/posts" method="post">
+            <button class="find__submit btn-reset" type="submit" aria-label="Кнопка поиска">
+              <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
+              </svg>
+            </button>
+            <input class="find__request" type="text" name="search" placeholder="Поиск по сайту" aria-label="Введите запрос поиска">
+          </form>
         </div>
       </div>
     </div>
@@ -156,5 +258,8 @@
   <footer>
 
   </footer>
+
+  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 </html>
