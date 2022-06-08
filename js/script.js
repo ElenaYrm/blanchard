@@ -1,4 +1,4 @@
-// dropdown
+// header-bottom dropdown
 const menuBtn = document.querySelectorAll('.tab');
 const drops = document.querySelectorAll('.dropdown');
 
@@ -44,9 +44,38 @@ document.addEventListener('click', function (e) {
 });
 
 // hero swiper
-let swiper = new Swiper('.swiper', {
+let mainSwiper = new Swiper('.main-slider', {
+  wrapperClass: 'main-slider__wrapper',
+  slideClass: 'main-slider__slide',
   loop: true,
   autoplay: {
-    delay: 5000,
+    delay: 4000,
+  },
+})
+
+// gallery select
+const element = document.querySelector('.filter__select');
+const choices = new Choices(element,{
+  searchEnabled: false,
+  shouldSort: false,
+  itemSelectText: "",
+});
+
+// gallery swiper
+let gallerySwiper = new Swiper('.gallery-slider', {
+  wrapperClass: 'gallery-slider__wrapper',
+  slideClass: 'gallery-slider__slide',
+  slidesPerView: 3,
+  spaceBetween: 50,
+  slidesPerGroup: 3,
+
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'fraction',
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
 })

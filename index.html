@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./libs/choices.min.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -231,11 +232,11 @@
 
   <main>
     <section class="hero">
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide swiper-slide-1"></div>
-          <div class="swiper-slide swiper-slide-2"></div>
-          <div class="swiper-slide swiper-slide-3"></div>
+      <div class="main-slider">
+        <div class="main-slider__wrapper">
+          <div class="main-slider__slide main-slider__slide--1"></div>
+          <div class="main-slider__slide main-slider__slide--2"></div>
+          <div class="main-slider__slide main-slider__slide--3"></div>
         </div>
       </div>
       <div class="container">
@@ -265,7 +266,64 @@
     </section>
 
     <section class="gallery" id="gallery">
+      <div class="container">
+        <div class="gallery__content">
+          <div class="gallery__sort">
+            <h2 class="section-title gallery__title">
+              Галерея
+            </h2>
+            <div class="filter">
+              <span class="filter__name descr">Фильтр:</span>
+              <select class="filter__select" name="art" tabindex="0">
+                <option value="">Живопись</option>
+                <option>Рисунок</option>
+                <option>Скульптура</option>
+              </select>
+            </div>
+            <ul class="checkbox list-reset">
+              <li class="checkbox__item descr">
+                <label class="checkbox__label">
+                  <input class="checkbox__check" type="checkbox" name="century">
+                  XIX век
+                  <span></span>
+                </label>
+              </li>
+              <li class="checkbox__item descr">
+                <label class="checkbox__label">
+                  <input class="checkbox__check" type="checkbox" name="century" checked>
+                  XX&nbsp;век
+                  <span></span>
+                </label>
+              </li>
+              <li class="checkbox__item descr">
+                <label class="checkbox__label">
+                  <input class="checkbox__check" type="checkbox" name="century">
+                  Современность
+                  <span></span>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="gallery__show">
+            <div class="gallery-control">
+              <button class="swiper-button-prev"></button>
+              <div class="swiper-pagination descr"></div>
+              <button class="swiper-button-next"></button>
+            </div>
+            <div class="gallery-slider">
+              <div class="gallery-slider__wrapper">
+                <div class="gallery-slider__slide gallery-slider__slide--1"></div>
+                <div class="gallery-slider__slide gallery-slider__slide--2"></div>
+                <div class="gallery-slider__slide gallery-slider__slide--3"></div>
+                <div class="gallery-slider__slide gallery-slider__slide--4"></div>
+                <div class="gallery-slider__slide gallery-slider__slide--5"></div>
+                <div class="gallery-slider__slide gallery-slider__slide--6"></div>
+              </div>
+            </div>
 
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="catalog" id="catalog">
@@ -290,6 +348,7 @@
 
   <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="./libs/choices.min.js"></script>
   <script src="./js/script.js"></script>
 </body>
 </html>
