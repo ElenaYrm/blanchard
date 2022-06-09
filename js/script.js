@@ -78,6 +78,11 @@ let gallerySwiper = new Swiper('.gallery-slider', {
     nextEl: '.gallery-nav__bnt-next',
     prevEl: '.gallery-nav__bnt-prev',
   },
+
+  a11y: {
+    prevSlideMessage: 'Предыдущая картина',
+    nextSlideMessage: 'Следующая картина',
+  },
 })
 
 // gallery modal
@@ -105,4 +110,23 @@ exitBtn.forEach(function (btn) {
     modal.classList.remove('modal__list--active');
     notes.classList.remove('modal__item--active');
   })
+})
+
+// events swiper
+let eventsSwiper = new Swiper('.events-slider', {
+  wrapperClass: 'events-slider__wrapper',
+  slideClass: 'events-slider__slide',
+  slidesPerView: 3,
+  spaceBetween: 50,
+  slidesPerGroup: 3,
+
+  navigation: {
+    nextEl: '.events-slider__btn-next',
+    prevEl: '.events-slider__btn-prev',
+  },
+
+  a11y: {
+    prevSlideMessage: 'Предыдущее событие',
+    nextSlideMessage: 'Следующее событие',
+  },
 })
