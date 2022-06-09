@@ -70,12 +70,39 @@ let gallerySwiper = new Swiper('.gallery-slider', {
   slidesPerGroup: 3,
 
   pagination: {
-    el: '.swiper-pagination',
+    el: '.gallery-nav__pagination',
     type: 'fraction',
   },
 
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.gallery-nav__bnt-next',
+    prevEl: '.gallery-nav__bnt-prev',
   },
+})
+
+// gallery modal
+const btn = document.querySelectorAll('.gallery-slider__slide');
+const modal = document.querySelector('.modal__list');
+const notes = document.querySelectorAll('.modal__item');
+const exitBtn = document.querySelectorAll('.note__btn');
+
+btn.forEach(function (element) {
+  element.addEventListener('click', function (e) {
+   let path = e.currentTarget.getAttribute('data-path');
+
+   notes.forEach(function (el) {
+     el.classList.remove('modal__item--active');
+   })
+
+   document.querySelector(`[data-gallery="${path}"]`).classList.add('modal__item--active');
+   modal.classList.add('modal__list--active');
+
+  });
+});
+
+exitBtn.forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    modal.classList.remove('modal__list--active');
+    notes.classList.remove('modal__item--active');
+  })
 })

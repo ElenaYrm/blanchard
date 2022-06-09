@@ -284,43 +284,66 @@
               <li class="checkbox__item descr">
                 <label class="checkbox__label">
                   <input class="checkbox__check" type="checkbox" name="century">
-                  XIX век
-                  <span></span>
+                  <span class="checkbox__new"></span>
+                  <span class="checkbox__name">XIX век</span>
                 </label>
               </li>
               <li class="checkbox__item descr">
                 <label class="checkbox__label">
                   <input class="checkbox__check" type="checkbox" name="century" checked>
-                  XX&nbsp;век
-                  <span></span>
+                  <span class="checkbox__new"></span>
+                  <span class="checkbox__name">XX&nbsp;век</span>
                 </label>
               </li>
               <li class="checkbox__item descr">
                 <label class="checkbox__label">
                   <input class="checkbox__check" type="checkbox" name="century">
-                  Современность
-                  <span></span>
+                  <span class="checkbox__new"></span>
+                  <span class="checkbox__name">Современность</span>
                 </label>
               </li>
             </ul>
           </div>
           <div class="gallery__show">
-            <div class="gallery-control">
-              <button class="swiper-button-prev"></button>
-              <div class="swiper-pagination descr"></div>
-              <button class="swiper-button-next"></button>
+            <div class="gallery-nav">
+              <button class="gallery-nav__bnt-prev"></button>
+              <div class="gallery-nav__pagination descr"></div>
+              <button class="gallery-nav__bnt-next"></button>
             </div>
             <div class="gallery-slider">
               <div class="gallery-slider__wrapper">
-                <div class="gallery-slider__slide gallery-slider__slide--1"></div>
-                <div class="gallery-slider__slide gallery-slider__slide--2"></div>
-                <div class="gallery-slider__slide gallery-slider__slide--3"></div>
-                <div class="gallery-slider__slide gallery-slider__slide--4"></div>
-                <div class="gallery-slider__slide gallery-slider__slide--5"></div>
-                <div class="gallery-slider__slide gallery-slider__slide--6"></div>
+                <button class="gallery-slider__slide btn-reset" type="button" data-path="one">
+                  <picture class="gallery-slider__img">
+                    <img src="./img/gallery-slide-1-1920.jpg" alt="Картина 1">
+                  </picture>
+                </button>
+                <button class="gallery-slider__slide btn-reset" type="button" data-path="two">
+                  <picture class="gallery-slider__img">
+                    <img src="./img/gallery-slide-2-1920.jpg" alt="Картина 2">
+                  </picture>
+                </button>
+                <button class="gallery-slider__slide btn-reset" type="button" data-path="three">
+                  <picture class="gallery-slider__img">
+                    <img src="./img/gallery-slide-3-1920.jpg" alt="Картина 3">
+                  </picture>
+                </button>
+                <button class="gallery-slider__slide btn-reset" type="button" data-path="four">
+                  <picture class="gallery-slider__img">
+                    <img src="./img/gallery-slide-4-1920.jpg" alt="Картина 4">
+                  </picture>
+                </button>
+                <button class="gallery-slider__slide btn-reset" type="button" data-path="five">
+                  <picture class="gallery-slider__img">
+                    <img src="./img/gallery-slide-5-1920.jpg" alt="Картина 5">
+                  </picture>
+                </button>
+                <button class="gallery-slider__slide btn-reset" type="button" data-path="six">
+                  <picture class="gallery-slider__img">
+                    <img src="./img/gallery-slide-6-1920.jpg" alt="Картина 6">
+                  </picture>
+                </button>
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -345,6 +368,137 @@
   <footer>
 
   </footer>
+
+  <div class="modal">
+    <ul class="modal__list list-reset">
+      <li class="modal__item" data-gallery="one">
+        <article class="note">
+          <div class="note__left">
+            <picture class="note__img">
+              <img src="./img/modal-1-1920.png" alt="Картина 1">
+            </picture>
+          </div>
+          <div class="note__right">
+            <button class="note__btn btn-reset" type="button"></button>
+            <h3 class="note__title article-title">Казимир Малевич</h3>
+            <h4 class="note__subtitle article-title">&laquo;Женщина с&nbsp;граблями&raquo;</h4>
+            <span class="note__date">1931-1932</span>
+            <p class="note__descr descr">
+              Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за&nbsp;её&nbsp;создание в&nbsp;1930-1931&nbsp;годах, после того, как первый цикл был утерян после Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.
+            </p>
+          </div>
+        </article>
+      </li>
+      <li class="modal__item" data-gallery="one">
+        <article class="note">
+          <div class="note__left">
+            <picture class="note__img">
+              <img src="./img/modal-1-1920.png" alt="Картина 1">
+            </picture>
+          </div>
+          <div class="note__right">
+            <button class="note__btn btn-reset" type="button"></button>
+            <h3 class="note__title article-title">Казимир Малевич</h3>
+            <h4 class="note__subtitle article-title">&laquo;Женщина с&nbsp;граблями&raquo;</h4>
+            <span class="note__date">1931-1932</span>
+            <p class="note__descr descr">
+              Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за&nbsp;её&nbsp;создание в&nbsp;1930-1931&nbsp;годах, после того, как первый цикл был утерян после Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.
+            </p>
+          </div>
+        </article>
+      </li>
+      <li class="modal__item" data-gallery="two">
+        <article class="note">
+          <div class="note__left">
+            <picture class="note__img">
+              <img src="./img/modal-2-1920.png" alt="Картина 2">
+            </picture>
+          </div>
+          <div class="note__right">
+            <button class="note__btn btn-reset" type="button"></button>
+            <h3 class="note__title article-title">Казимир Малевич</h3>
+            <h4 class="note__subtitle article-title">&laquo;Женщина с&nbsp;граблями&raquo;</h4>
+            <span class="note__date">1931-1932</span>
+            <p class="note__descr descr">
+              Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за&nbsp;её&nbsp;создание в&nbsp;1930-1931&nbsp;годах, после того, как первый цикл был утерян после Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.
+            </p>
+          </div>
+        </article>
+      </li>
+      <li class="modal__item" data-gallery="three">
+        <article class="note">
+          <div class="note__left">
+            <picture class="note__img">
+              <img src="./img/modal-3-1920.png" alt="Картина 3">
+            </picture>
+          </div>
+          <div class="note__right">
+            <button class="note__btn btn-reset" type="button"></button>
+            <h3 class="note__title article-title">Казимир Малевич</h3>
+            <h4 class="note__subtitle article-title">&laquo;Женщина с&nbsp;граблями&raquo;</h4>
+            <span class="note__date">1931-1932</span>
+            <p class="note__descr descr">
+              Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за&nbsp;её&nbsp;создание в&nbsp;1930-1931&nbsp;годах, после того, как первый цикл был утерян после Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.
+            </p>
+          </div>
+        </article>
+      </li>
+      <li class="modal__item" data-gallery="four">
+        <article class="note">
+          <div class="note__left">
+            <picture class="note__img">
+              <img src="./img/modal-4-1920.png" alt="Картина 4">
+            </picture>
+          </div>
+          <div class="note__right">
+            <button class="note__btn btn-reset" type="button"></button>
+            <h3 class="note__title article-title">Казимир Малевич</h3>
+            <h4 class="note__subtitle article-title">&laquo;Женщина с&nbsp;граблями&raquo;</h4>
+            <span class="note__date">1931-1932</span>
+            <p class="note__descr descr">
+              Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за&nbsp;её&nbsp;создание в&nbsp;1930-1931&nbsp;годах, после того, как первый цикл был утерян после Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.
+            </p>
+          </div>
+        </article>
+      </li>
+      <li class="modal__item" data-gallery="five">
+        <article class="note">
+          <div class="note__left">
+            <picture class="note__img">
+              <img src="./img/modal-5-1920.png" alt="Картина 5">
+            </picture>
+          </div>
+          <div class="note__right">
+            <button class="note__btn btn-reset" type="button"></button>
+            <h3 class="note__title article-title">Казимир Малевич</h3>
+            <h4 class="note__subtitle article-title">&laquo;Женщина с&nbsp;граблями&raquo;</h4>
+            <span class="note__date">1931-1932</span>
+            <p class="note__descr descr">
+              Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за&nbsp;её&nbsp;создание в&nbsp;1930-1931&nbsp;годах, после того, как первый цикл был утерян после Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.
+            </p>
+          </div>
+        </article>
+      </li>
+      <li class="modal__item" data-gallery="six">
+        <article class="note">
+          <div class="note__left">
+            <picture class="note__img">
+              <img src="./img/modal-6-1920.png" alt="Картина 6">
+            </picture>
+          </div>
+          <div class="note__right">
+            <button class="note__btn btn-reset" type="button"></button>
+            <h3 class="note__title article-title">Казимир Малевич</h3>
+            <h4 class="note__subtitle article-title">&laquo;Женщина с&nbsp;граблями&raquo;</h4>
+            <span class="note__date">1931-1932</span>
+            <p class="note__descr descr">
+              Картина из&nbsp;второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за&nbsp;её&nbsp;создание в&nbsp;1930-1931&nbsp;годах, после того, как первый цикл был утерян после Берлинской и&nbsp;Варшавской выставок в&nbsp;1927&nbsp;году.
+            </p>
+          </div>
+        </article>
+      </li>
+    </ul>
+  </div>
 
   <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
