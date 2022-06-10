@@ -130,3 +130,28 @@ let eventsSwiper = new Swiper('.events-slider', {
     nextSlideMessage: 'Следующее событие',
   },
 })
+
+// projects tooltip
+tippy('.projects__tooltip', {
+  theme: 'tooltip',
+  maxWidth: 264,
+});
+
+// projects swiper
+let projectsSwiper = new Swiper('.projects-slider', {
+  wrapperClass: 'projects-slider__wrapper',
+  slideClass: 'projects-slider__slide',
+  slidesPerView: 3,
+  spaceBetween: 50,
+  slidesPerGroup: 3,
+
+  navigation: {
+    nextEl: '.projects-slider__btn-next',
+    prevEl: '.projects-slider__btn-prev',
+  },
+
+  a11y: {
+    prevSlideMessage: 'Предыдущее событие',
+    nextSlideMessage: 'Следующее событие',
+  },
+})

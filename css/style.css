@@ -125,7 +125,8 @@ body {
 .nav__link::after,
 .login::after,
 .tab::after,
-.article__link::before {
+.article__link::before,
+.projects__link::before {
   content: "";
   position: absolute;
   top: -2px;
@@ -141,7 +142,8 @@ body {
 .nav__link:focus:not(:hover):not(:active)::after,
 .login:focus:not(:hover):not(:active)::after,
 .tab:focus:not(:hover):not(:active)::after,
-.article__link:focus:not(:hover):not(:active)::before {
+.article__link:focus:not(:hover):not(:active)::before,
+.projects__link:focus:not(:hover):not(:active)::before {
   opacity: 1;
 }
 
@@ -1298,6 +1300,255 @@ body {
 
 .events-slider__btn-prev:active,
 .events-slider__btn-next:active {
+  border: 2px solid var(--color-amethyst);
+  background-color: var(--color-biloba);
+}
+
+/*projects*/
+.projects {
+  padding: 39px 0 80px;
+  background-color: var(--color-white);
+}
+
+.projects__title {
+  margin-bottom: 15px;
+}
+
+.projects__descr {
+  max-width: 1075px;
+  margin-bottom: 19px;
+}
+
+.projects__tooltip {
+  width: 16px;
+  height: 16px;
+  border-radius: 100px;
+  border: 1px solid var(--color-amethyst);
+  background-color: var(--color-white);
+  text-align: center;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 0;
+  color: var(--color-black);
+  transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.projects__tooltip:focus:not(:active),
+.projects__tooltip:hover {
+  background-color: var(--color-biloba);
+  border-color: var(--color-amethyst);
+}
+
+.projects__tooltip:active {
+  border-color: transparent;
+  background-color: var(--color-amethyst);
+  color: var(--color-white);
+}
+
+.projects__link {
+  position: relative;
+  color: var(--color-amethyst);
+  z-index: 10;
+  transition: color 0.3s ease-in-out;
+}
+
+.projects__link::before {
+  height: calc(100% + 6px);
+  background-color: var(--color-amethyst);
+}
+
+.projects__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-amethyst);
+  opacity: 0;
+  transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.projects__link:focus:not(:hover):not(:active) {
+  color: var(--color-white);
+}
+
+.projects__link:hover::after {
+  opacity: 1;
+}
+
+.projects__link:active {
+  color: var(--color-purple);
+}
+
+.projects__link:active::after {
+  background-color: var(--color-purple);
+}
+
+.tippy-box[data-theme~='tooltip'] {
+  background-color: var(--color-amethyst);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: var(--color-white);
+  border-radius: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.tippy-box[data-theme~='tooltip'][data-placement^='top'] > .tippy-arrow::before {
+  border-top-color: var(--color-amethyst);
+}
+.tippy-box[data-theme~='tooltip'][data-placement^='bottom'] > .tippy-arrow::before {
+  border-bottom-color: var(--color-amethyst);
+}
+.tippy-box[data-theme~='tooltip'][data-placement^='left'] > .tippy-arrow::before {
+  border-left-color: var(--color-amethyst);
+}
+.tippy-box[data-theme~='tooltip'][data-placement^='right'] > .tippy-arrow::before {
+  border-right-color: var(--color-amethyst);
+}
+
+.projects__subtitle {
+  margin-bottom: 22px;
+}
+
+.projects__partners {
+  position: relative;
+}
+
+.projects-slider {
+  position: relative;
+  width: calc(1450 / 1600 * 100%);
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+}
+
+.projects-slider__wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.projects-slider__slide {
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.projects-slider__link {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #CACACA;
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.projects-slider__img {
+  width: auto;
+  height: auto;
+  filter: grayscale(100%) opacity(50%);
+  transition: filter 0.3s ease-in-out;
+}
+
+.projects-slider__link:focus:not(:hover):not(:active) {
+  border-color: var(--color-amethyst);
+}
+
+.projects-slider__link:hover .projects-slider__img {
+  filter: none;
+}
+
+.projects-slider__link:active {
+  border-color: var(--color-amethyst);
+}
+
+.projects-slider__link:active .projects-slider__img {
+  filter: none;
+}
+
+.projects-slider__btn-prev,
+.projects-slider__btn-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ECECEC;
+  transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.projects-slider__btn-prev {
+  left: 0;
+}
+
+.projects-slider__btn-next {
+  right: 0;
+}
+
+.projects-slider__btn-prev.swiper-button-disabled,
+.projects-slider__btn-next.swiper-button-disabled {
+  opacity: 1;
+  cursor: auto;
+  pointer-events: none;
+}
+
+.projects-slider__btn-prev::after,
+.projects-slider__btn-next::after {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid var(--color-black);
+  border-right: 1px solid var(--color-black);
+}
+
+.projects-slider__btn-prev::after {
+  transform: rotate(225deg);
+  margin-left: 3px;
+}
+
+.projects-slider__btn-next::after {
+  transform: rotate(45deg);
+  margin-right: 3px;
+}
+
+.projects-slider__btn-prev.swiper-button-disabled::after,
+.projects-slider__btn-next.swiper-button-disabled::after {
+  border-color: #BBBBBB;
+}
+
+.projects-slider__btn-prev:focus:not(:hover),
+.projects-slider__btn-next:focus:not(:hover) {
+  border: 2px solid var(--color-amethyst);
+}
+
+.projects-slider__btn-prev.swiper-button-disabled:focus,
+.projects-slider__btn-next.swiper-button-disabled:focus {
+  border: none;
+}
+
+.projects-slider__btn-prev:hover,
+.projects-slider__btn-next:hover {
+  background-color: var(--color-biloba);
+}
+
+.projects-slider__btn-prev:active,
+.projects-slider__btn-next:active {
   border: 2px solid var(--color-amethyst);
   background-color: var(--color-biloba);
 }
