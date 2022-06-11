@@ -1552,3 +1552,42 @@ body {
   border: 2px solid var(--color-amethyst);
   background-color: var(--color-biloba);
 }
+
+/*contacts*/
+
+
+
+/*footer*/
+.footer {
+  background-color: var(--color-black);
+}
+
+.footer__content {
+  padding: 46px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.social__icon {
+  fill: #CACACA;
+  transition: fill 0.3s ease-in-out;
+}
+
+.social__link:focus:not(:active) .social__icon,
+.social__link:hover .social__icon {
+  fill: var(--color-white);
+}
+
+.social__link:active .social__icon {
+  fill: var(--color-amethyst);
+}
