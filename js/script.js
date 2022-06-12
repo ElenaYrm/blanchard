@@ -155,3 +155,88 @@ let projectsSwiper = new Swiper('.projects-slider', {
     nextSlideMessage: 'Следующее событие',
   },
 })
+
+// input mask tel
+const selector = document.querySelector("input[type='tel']");
+const im = new Inputmask("+7(999) 999-99-99");
+
+im.mask(selector);
+
+// validate form
+new window.JustValidate('.form', {
+  rules: {
+    name: {
+      required: true,
+      minLength: 3,
+      maxLength: 30,
+    },
+    tel: {
+      required: true,
+      function: () => {
+        const phone = selector.inputmask.unmaskedvalue();
+        return Number(phone) && phone.length === 10;
+      },
+    },
+  },
+
+  messages: {
+    name: {
+      required: 'Вы не ввели имя',
+      minLength: 'Поле должно содержать более 3 символов',
+      maxLength: 'Поле должно содержать не более 30 символов',
+    },
+    tel: {
+      required: 'Вы не ввели телефон',
+      function: 'Поле должно содержать 10 символов',
+    },
+    email: {
+      required: 'Вы не ввели e-mail',
+      email: 'Введен некорректный e-mail',
+    },
+  },
+
+  colorWrong: '#D11616',
+
+  submitHandler: function (thisForm, values, ajax) {
+
+    ajax({
+      url: 'https://jsonplaceholder.typicode.com/posts',
+      method: 'POST',
+      data: values,
+      async: true,
+      callback: function (response) {
+        alert('Response from server: ' + response)
+      },
+      error: function (response) {
+        alert('Response from server: ' + response)
+      }
+    });
+  },
+});
+
+// contacts map
+ymaps.ready(init);
+function init(){
+  let center = [55.75846806898367,37.60108850004083];
+
+  let yandexMap = new ymaps.Map("map", {
+    center: center,
+    zoom: 14,
+  });
+
+  let newPlacemark = new ymaps.Placemark(center, {}, {
+    iconLayout: 'default#image',
+    iconImageHref: 'img/placeMark.svg',
+    iconImageSize: [20, 20],
+    iconImageOffset: [-10, -5]
+  });
+
+  yandexMap.geoObjects.add(newPlacemark);
+
+  yandexMap.controls.remove('searchControl');
+  yandexMap.controls.remove('trafficControl');
+  yandexMap.controls.remove('typeSelector');
+  yandexMap.controls.remove('fullscreenControl');
+  yandexMap.controls.remove('rulerControl');
+  map.behaviors.disable(['scrollZoom']);
+}
