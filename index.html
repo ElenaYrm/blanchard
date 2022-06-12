@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="./libs/choices.min.css">
+  <link rel="stylesheet" href="./libs/accordion.min.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -351,7 +352,255 @@
 
     <section class="catalog" id="catalog">
       <div class="container">
-
+        <h2 class="section-title catalog__title">
+          Каталог
+        </h2>
+        <p class="descr catalog__descr">
+          Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и&nbsp;по&nbsp;сей день остаются уделом либералов, которые жаждут быть функционально разнесены на&nbsp;независимые элементы.
+        </p>
+        <div class="catalog__content">
+          <div class="catalog__description">
+            <article class="bookmark" data-mark="unknown">
+              <div class="bookmark__top">
+                <picture class="bookmark__img">
+                  <img src="./img/catalog-unknown.jpg" alt="Неизвестный деятель" aria-hidden="true">
+                </picture>
+              </div>
+              <div class="bookmark__bottom">
+                <h4 class="article-title bookmark__title">
+                  Что мы&nbsp;о&nbsp;нём знаем?
+                </h4>
+                <p class="descr bookmark__descr">
+                  Пока ничего... Зато мы&nbsp;точно знаем, что в&nbsp;галерее есть на&nbsp;что посмотреть!
+                </p>
+                <a href="#" class="bookmark__link">
+                  В&nbsp;галерею
+                </a>
+              </div>
+            </article>
+            <article class="bookmark bookmark--active" data-mark="ghirlandaio">
+              <div class="bookmark__top">
+                <picture class="bookmark__img">
+                  <img src="./img/catalog-Domenico_Ghirlandaio.png" alt="Доменико Гирландайо">
+                </picture>
+              </div>
+              <div class="bookmark__bottom">
+                <h4 class="article-title bookmark__title">
+                  Доменико Гирландайо
+                </h4>
+                <span class="bookmark__date">2&nbsp;июня 1448&nbsp;&mdash; 11&nbsp;января 1494.</span>
+                <p class="descr bookmark__descr">
+                  Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых циклов, в&nbsp;которых выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских персонажей (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).
+                </p>
+              </div>
+            </article>
+          </div>
+          <ul class="accordion list-reset">
+            <li class="accordion__item">
+              <h3 class="accordion__title">
+                <button class="accordion__control btn-reset" type="button">
+                  <span class="accordion__header article-title">C&nbsp;1400 по&nbsp;1499&nbsp;гг.</span>
+                </button>
+              </h3>
+              <div class="accordion__content">
+                <ul class="artist list-reset descr">
+                  <li class="artist__item">
+                    <button class="artist__btn btn-reset" data-way="unknown">Бенедетто ди&nbsp;Биндо</button>
+                  </li>
+                  <li class="artist__item">
+                    <button class="artist__btn btn-reset" data-way="unknown">Бергоньоне, Амброджо</button>
+                  </li>
+                  <li class="artist__item">
+                    <button class="artist__btn btn-reset" data-way="unknown">Биссоло, Франческо</button>
+                  </li>
+                  <li class="artist__item">
+                    <button class="artist__btn btn-reset" data-way="unknown">Больтраффио, Джованни</button>
+                  </li>
+                  <li class="artist__item">
+                    <button class="artist__btn btn-reset" data-way="unknown">Бонсиньори, Франческо</button>
+                  </li>
+                  <li class="artist__item">
+                    <button class="artist__btn btn-reset" data-way="unknown">Боттичини, Рафаэлло</button>
+                  </li>
+                  <li class="artist__item">
+                    <button class="artist__btn btn-reset" data-way="unknown">Брамантино</button>
+                  </li>
+                  <li class="artist__item">
+                    <button class="artist__btn btn-reset" data-way="unknown">Бреа, Людовико</button>
+                  </li>
+                  <li class="artist__item">
+                    <button class="artist__btn btn-reset" data-way="unknown">Бьяджо д’Антонио Туччи</button>
+                  </li>
+                  <li class="artist__item">
+                    <button class="artist__btn btn-reset" data-way="unknown">Веккьетта</button>
+                  </li>
+                  <li class="artist__item">
+                    <button class="artist__btn btn-reset" data-way="unknown">Андреа Верроккьо</button>
+                  </li>
+                  <li class="artist__item">
+                    <button class="artist__btn btn-reset artist__btn--active" data-way="ghirlandaio">Доменико Гирландайо</button>
+                  </li>
+                  <li class="artist__item">
+                    <button class="artist__btn btn-reset" data-way="unknown">Беноццо Гоццоли</button>
+                  </li>
+                  <li class="artist__item">
+                    <button class="artist__btn btn-reset" data-way="unknown">Граначчи, Франческо</button>
+                  </li>
+                  <li class="artist__item">
+                    <button class="artist__btn btn-reset" data-way="unknown">Грегорио ди Чекко</button>
+                  </li>
+                  <li class="artist__item">
+                    <button class="artist__btn btn-reset" data-way="unknown">Джованни да Удине</button>
+                  </li>
+                  <li class="artist__item">
+                    <button class="artist__btn btn-reset" data-way="unknown">Джованни ди Паоло</button>
+                  </li>
+                  <li class="artist__item">
+                    <button class="artist__btn btn-reset" data-way="unknown">Джорджоне</button>
+                  </li>
+                  <li class="artist__item">
+                    <button class="artist__btn btn-reset" data-way="unknown">Парентино, Бернардо</button>
+                  </li>
+                  <li class="artist__item">
+                    <button class="artist__btn btn-reset" data-way="unknown">Пезеллино</button>
+                  </li>
+                  <li class="artist__item">
+                    <button class="artist__btn btn-reset" data-way="unknown">Пьетро Перуджино</button>
+                  </li>
+                  <li class="artist__item">
+                    <button class="artist__btn btn-reset" data-way="unknown">Перуцци, Бальдассаре</button>
+                  </li>
+                  <li class="artist__item">
+                    <button class="artist__btn btn-reset" data-way="unknown">Пизанелло</button>
+                  </li>
+                  <li class="artist__item">
+                    <button class="artist__btn btn-reset" data-way="unknown">Пинтуриккьо</button>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="accordion__item">
+              <h3 class="accordion__title">
+                <button class="accordion__control btn-reset" type="button">
+                  <span class="accordion__header article-title">C&nbsp;1500 по&nbsp;1599&nbsp;гг.</span>
+                </button>
+              </h3>
+              <div class="accordion__content">
+                <article class="accordion__article">
+                  <h4 class="accordion__subtitle article-title">
+                    Здесь пока пусто
+                  </h4>
+                  <p class="accordion__descr descr">
+                    А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                  </p>
+                  <a href="#" class="accordion__link descr">
+                    В&nbsp;галерею
+                  </a>
+                </article>
+              </div>
+            </li>
+            <li class="accordion__item">
+              <h3 class="accordion__title">
+                <button class="accordion__control btn-reset" type="button">
+                  <span class="accordion__header article-title">C&nbsp;1600 по&nbsp;1699&nbsp;гг.</span>
+                </button>
+              </h3>
+              <div class="accordion__content">
+                <article class="accordion__article">
+                  <h4 class="accordion__subtitle article-title">
+                    Здесь пока пусто
+                  </h4>
+                  <p class="accordion__descr descr">
+                    А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                  </p>
+                  <a href="#" class="accordion__link descr">
+                    В&nbsp;галерею
+                  </a>
+                </article>
+              </div>
+            </li>
+            <li class="accordion__item">
+              <h3 class="accordion__title">
+                <button class="accordion__control btn-reset" type="button">
+                  <span class="accordion__header article-title">C&nbsp;1700 по&nbsp;1799&nbsp;гг.</span>
+                </button>
+              </h3>
+              <div class="accordion__content">
+                <article class="accordion__article">
+                  <h4 class="accordion__subtitle article-title">
+                    Здесь пока пусто
+                  </h4>
+                  <p class="accordion__descr descr">
+                    А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                  </p>
+                  <a href="#" class="accordion__link descr">
+                    В&nbsp;галерею
+                  </a>
+                </article>
+              </div>
+            </li>
+            <li class="accordion__item">
+              <h3 class="accordion__title">
+                <button class="accordion__control btn-reset" type="button">
+                  <span class="accordion__header article-title">C&nbsp;1800 по&nbsp;1899&nbsp;гг.</span>
+                </button>
+              </h3>
+              <div class="accordion__content">
+                <article class="accordion__article">
+                  <h4 class="accordion__subtitle article-title">
+                    Здесь пока пусто
+                  </h4>
+                  <p class="accordion__descr descr">
+                    А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                  </p>
+                  <a href="#" class="accordion__link descr">
+                    В&nbsp;галерею
+                  </a>
+                </article>
+              </div>
+            </li>
+            <li class="accordion__item">
+              <h3 class="accordion__title">
+                <button class="accordion__control btn-reset" type="button">
+                  <span class="accordion__header article-title">C&nbsp;1900 по&nbsp;1999&nbsp;гг.</span>
+                </button>
+              </h3>
+              <div class="accordion__content">
+                <article class="accordion__article">
+                  <h4 class="accordion__subtitle article-title">
+                    Здесь пока пусто
+                  </h4>
+                  <p class="accordion__descr descr">
+                    А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                  </p>
+                  <a href="#" class="accordion__link descr">
+                    В&nbsp;галерею
+                  </a>
+                </article>
+              </div>
+            </li>
+            <li class="accordion__item">
+              <h3 class="accordion__title">
+                <button class="accordion__control btn-reset" type="button">
+                  <span class="accordion__header article-title">C&nbsp;2000&nbsp;г.</span>
+                </button>
+              </h3>
+              <div class="accordion__content">
+                <article class="accordion__article">
+                  <h4 class="accordion__subtitle article-title">
+                    Здесь пока пусто
+                  </h4>
+                  <p class="accordion__descr descr">
+                    А&nbsp;в&nbsp;галерее вы&nbsp;всегда можете найти что-то интересное для себя
+                  </p>
+                  <a href="#" class="accordion__link descr">
+                    В&nbsp;галерею
+                  </a>
+                </article>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -809,6 +1058,7 @@
   <script src="./libs/choices.min.js"></script>
   <script src="https://unpkg.com/@popperjs/core@2"></script>
   <script src="https://unpkg.com/tippy.js@6"></script>
+  <script src="./libs/accordion.min.js"></script>
   <script src="./libs/inputmask.min.js"></script>
   <script src="./libs/just-validate.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
