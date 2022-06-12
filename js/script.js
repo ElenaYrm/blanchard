@@ -154,8 +154,8 @@ let eventsSwiper = new Swiper('.events-slider', {
   slidesPerGroup: 3,
 
   navigation: {
-    nextEl: '.events-slider__btn-next',
-    prevEl: '.events-slider__btn-prev',
+    nextEl: '.events__btn-next',
+    prevEl: '.events__btn-prev',
   },
 
   a11y: {
@@ -179,8 +179,8 @@ let projectsSwiper = new Swiper('.projects-slider', {
   slidesPerGroup: 3,
 
   navigation: {
-    nextEl: '.projects-slider__btn-next',
-    prevEl: '.projects-slider__btn-prev',
+    nextEl: '.projects__btn-next',
+    prevEl: '.projects__btn-prev',
   },
 
   a11y: {
@@ -252,10 +252,22 @@ ymaps.ready(init);
 function init(){
   let center = [55.75846806898367,37.60108850004083];
 
-  let yandexMap = new ymaps.Map("map", {
-    center: center,
-    zoom: 14,
-  });
+  let yandexMap = new ymaps.Map("map",
+    {
+      center: center,
+      zoom: 14,
+      controls: ['geolocationControl', 'zoomControl']
+    },
+    {
+      geolocationControlSize: "large",
+      geolocationControlPosition:  { top: "330px", right: "20px" },
+      geolocationControlFloat: 'none',
+      zoomControlSize: "small",
+      zoomControlFloat: "none",
+      zoomControlPosition: { top: "250px", right: "20px" }
+    }
+  );
+
 
   let newPlacemark = new ymaps.Placemark(center, {}, {
     iconLayout: 'default#image',
@@ -265,11 +277,6 @@ function init(){
   });
 
   yandexMap.geoObjects.add(newPlacemark);
-
-  yandexMap.controls.remove('searchControl');
-  yandexMap.controls.remove('trafficControl');
-  yandexMap.controls.remove('typeSelector');
-  yandexMap.controls.remove('fullscreenControl');
-  yandexMap.controls.remove('rulerControl');
-  map.behaviors.disable(['scrollZoom']);
+  yandexMap.behaviors.disable(['scrollZoom']);
+  yandexMap.container.fitToViewport();
 }
