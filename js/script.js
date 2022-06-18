@@ -1,3 +1,45 @@
+// header-top burger
+// set root for nav--active
+let headerTopHeight = document.querySelector('.header-top').offsetHeight;
+document.querySelector(':root').style.setProperty('--header-top-height', `${headerTopHeight}px`);
+
+// burger events
+let burger = document.querySelector('.burger');
+let menu = document.querySelector('.nav');
+let menuLinks = document.querySelectorAll('.close-link');
+let topHeader = document.querySelector('.header-top');
+
+burger.addEventListener('click', function (){
+  document.body.classList.toggle('stop-scroll');
+  burger.classList.toggle('burger--active');
+  burger.setAttribute("aria-expanded", "true");
+  menu.classList.toggle('nav--active');
+  topHeader.classList.toggle('header-top--active');
+})
+
+menuLinks.forEach(function (el) {
+  el.addEventListener('click', function () {
+    document.body.classList.remove('stop-scroll');
+    burger.classList.remove('burger--active');
+    burger.setAttribute("aria-expanded", "false");
+    menu.classList.remove('nav--active');
+    topHeader.classList.remove('header-top--active');
+  })
+})
+
+// header-top search
+let openBtn = document.querySelector('.loupe');
+let closeBtn = document.querySelector('.search__close');
+let inputSearch = document.querySelector('.search');
+
+openBtn.addEventListener('click', function () {
+  inputSearch.classList.add('search--active');
+});
+
+closeBtn.addEventListener('click', function () {
+  inputSearch.classList.remove('search--active');
+})
+
 // header-bottom dropdown
 const menuBtn = document.querySelectorAll('.tab');
 const drops = document.querySelectorAll('.dropdown');
@@ -65,9 +107,6 @@ const choices = new Choices(element,{
 let gallerySwiper = new Swiper('.gallery-slider', {
   wrapperClass: 'gallery-slider__wrapper',
   slideClass: 'gallery-slider__slide',
-  slidesPerView: 3,
-  spaceBetween: 50,
-  slidesPerGroup: 3,
 
   pagination: {
     el: '.gallery-nav__pagination',
@@ -82,6 +121,31 @@ let gallerySwiper = new Swiper('.gallery-slider', {
   a11y: {
     prevSlideMessage: 'Предыдущая картина',
     nextSlideMessage: 'Следующая картина',
+  },
+
+  slidesPerView: 1,
+  spaceBetween: 20,
+  slidesPerGroup: 1,
+
+
+  breakpoints: {
+    576: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+      slidesPerGroup: 2,
+    },
+
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 35,
+      slidesPerGroup: 2,
+    },
+
+    1440: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+      slidesPerGroup: 3,
+    },
   },
 })
 
@@ -101,7 +165,6 @@ btn.forEach(function (element) {
 
    document.querySelector(`[data-gallery="${path}"]`).classList.add('modal__item--active');
    modal.classList.add('modal__list--active');
-
   });
 });
 
@@ -149,18 +212,45 @@ tabsBtn.forEach(function (element) {
 let eventsSwiper = new Swiper('.events-slider', {
   wrapperClass: 'events-slider__wrapper',
   slideClass: 'events-slider__slide',
-  slidesPerView: 3,
-  spaceBetween: 50,
-  slidesPerGroup: 3,
 
   navigation: {
     nextEl: '.events__btn-next',
     prevEl: '.events__btn-prev',
   },
 
+  pagination: {
+    el: '.events-slider__pagination',
+    type: 'bullets',
+    clickable: true,
+  },
+
   a11y: {
     prevSlideMessage: 'Предыдущее событие',
     nextSlideMessage: 'Следующее событие',
+  },
+
+  slidesPerView: 1,
+  spaceBetween: 20,
+  slidesPerGroup: 1,
+
+  breakpoints: {
+    576: {
+      slidesPerView: 2,
+      spaceBetween: 35,
+      slidesPerGroup: 2,
+    },
+
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 3,
+    },
+
+    1440: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+      slidesPerGroup: 3,
+    },
   },
 })
 
@@ -174,9 +264,6 @@ tippy('.projects__tooltip', {
 let projectsSwiper = new Swiper('.projects-slider', {
   wrapperClass: 'projects-slider__wrapper',
   slideClass: 'projects-slider__slide',
-  slidesPerView: 3,
-  spaceBetween: 50,
-  slidesPerGroup: 3,
 
   navigation: {
     nextEl: '.projects__btn-next',
@@ -186,6 +273,30 @@ let projectsSwiper = new Swiper('.projects-slider', {
   a11y: {
     prevSlideMessage: 'Предыдущее событие',
     nextSlideMessage: 'Следующее событие',
+  },
+
+  slidesPerView: 1,
+  spaceBetween: 20,
+  slidesPerGroup: 1,
+
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 35,
+      slidesPerGroup: 2,
+    },
+
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+      slidesPerGroup: 2,
+    },
+
+    1440: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+      slidesPerGroup: 3,
+    },
   },
 })
 
