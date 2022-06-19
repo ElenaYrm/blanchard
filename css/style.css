@@ -48,6 +48,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  /*outline: 1px solid red;*/
 }
 
 a {
@@ -233,6 +234,7 @@ body {
 }
 
 .header-top__content {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -352,15 +354,15 @@ body {
   color: var(--color-amethyst);
 }
 
-.header-top__search {
+.loupe {
   display: none;
-  position: relative;
 }
 
 .search {
   padding: 10px 45px 10px 40px;
   position: absolute;
-  top: -8px;
+  top: 50%;
+  transform: translateY(-50%);
   right: 0;
   background-color: var(--color-black);
   z-index: 90;

@@ -27,8 +27,9 @@
           </button>
           <a class="logo">
             <picture>
-              <source media="(max-width: 1024px)" srcset="./img/logo-1024.svg">
-              <img src="./img/logo-1920.svg" alt="Логотип Blanchard">
+              <source media="(max-width: 576px)" srcset="./img/logo-small.svg">
+              <source media="(max-width: 1024px)" srcset="./img/logo-large.svg">
+              <img src="./img/logo-medium.svg" alt="Логотип Blanchard">
             </picture>
           </a>
           <nav class="nav menu-text">
@@ -59,29 +60,27 @@
               <span class="login__name">Войти</span>
             </a>
           </nav>
-          <div class="header-top__search">
-            <button class="loupe btn-reset" type="button" aria-label="Открыть окно поиска" aria-expanded="false">
+          <button class="loupe btn-reset" type="button" aria-label="Открыть окно поиска" aria-expanded="false">
+            <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z"/>
+            </svg>
+          </button>
+          <form class="search" action="https://jsonplaceholder.typicode.com/posts" method="post">
+            <button class="search__submit btn-reset" type="submit" aria-label="Кнопка поиска">
               <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z"/>
               </svg>
             </button>
-            <form class="search" action="https://jsonplaceholder.typicode.com/posts" method="post">
-              <button class="search__submit btn-reset" type="submit" aria-label="Кнопка поиска">
-                <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)"/>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z"/>
-                </svg>
-              </button>
-              <input class="search__request" type="text" name="search" aria-label="Введите запрос поиска" autocomplete="off">
-              <button class="search__close btn-reset" type="button" aria-label="Закрыть окно поиска" aria-expanded="true">
-                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="29.567" height="2.9567" transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.09326 0)"/>
-                  <rect width="29.567" height="2.9567" transform="matrix(0.707093 -0.707121 0.707093 0.707121 0 20.9075)"/>
-                </svg>
-              </button>
-            </form>
-          </div>
+            <input class="search__request" type="text" name="search" aria-label="Введите запрос поиска" autocomplete="off">
+            <button class="search__close btn-reset" type="button" aria-label="Закрыть окно поиска" aria-expanded="true">
+              <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="29.567" height="2.9567" transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.09326 0)"/>
+                <rect width="29.567" height="2.9567" transform="matrix(0.707093 -0.707121 0.707093 0.707121 0 20.9075)"/>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </div>
@@ -324,36 +323,42 @@
               <div class="gallery-slider__wrapper">
                 <button class="gallery-slider__slide btn-reset" type="button" data-path="one">
                   <picture class="gallery-slider__img">
+                    <source media="(max-width: 992px)" srcset="./img/gallery-slide-1-768.jpg">
                     <source media="(max-width: 1440px)" srcset="./img/gallery-slide-1-1024.jpg">
                     <img src="./img/gallery-slide-1-1920.jpg" alt="Казимир Малевич, Торс №2">
                   </picture>
                 </button>
                 <button class="gallery-slider__slide btn-reset" type="button" data-path="two">
                   <picture class="gallery-slider__img">
+                    <source media="(max-width: 992px)" srcset="./img/gallery-slide-2-768.jpg">
                     <source media="(max-width: 1440px)" srcset="./img/gallery-slide-2-1024.jpg">
                     <img src="./img/gallery-slide-2-1920.jpg" alt="Казимир Малевич, Женщина с&nbsp;граблями">
                   </picture>
                 </button>
                 <button class="gallery-slider__slide btn-reset" type="button" data-path="three">
                   <picture class="gallery-slider__img">
+                    <source media="(max-width: 992px)" srcset="./img/gallery-slide-3-768.jpg">
                     <source media="(max-width: 1440px)" srcset="./img/gallery-slide-3-1024.jpg">
                     <img src="./img/gallery-slide-3-1920.jpg" alt="Казимир Малевич, Уборка ржи">
                   </picture>
                 </button>
                 <button class="gallery-slider__slide btn-reset" type="button" data-path="four">
                   <picture class="gallery-slider__img">
+                    <source media="(max-width: 992px)" srcset="./img/gallery-slide-4-768.jpg">
                     <source media="(max-width: 1440px)" srcset="./img/gallery-slide-4-1024.jpg">
                     <img src="./img/gallery-slide-4-1920.jpg" alt="Иван Клюн, Суперматизм">
                   </picture>
                 </button>
                 <button class="gallery-slider__slide btn-reset" type="button" data-path="five">
                   <picture class="gallery-slider__img">
+                    <source media="(max-width: 992px)" srcset="./img/gallery-slide-5-768.jpg">
                     <source media="(max-width: 1440px)" srcset="./img/gallery-slide-5-1024.jpg">
                     <img src="./img/gallery-slide-5-1920.jpg" alt="Казимир Малевич, Женщина с&nbsp;ведрами">
                   </picture>
                 </button>
                 <button class="gallery-slider__slide btn-reset" type="button" data-path="six">
                   <picture class="gallery-slider__img">
+                    <source media="(max-width: 992px)" srcset="./img/gallery-slide-6-768.jpg">
                     <source media="(max-width: 1440px)" srcset="./img/gallery-slide-6-1024.jpg">
                     <img src="./img/gallery-slide-6-1920.jpg" alt="Казимир Малевич, Суперматизм">
                   </picture>
@@ -378,6 +383,7 @@
             <article class="bookmark" data-mark="unknown" id="unknown">
               <div class="bookmark__top">
                 <picture class="bookmark__img">
+                  <source media="(max-width: 768px)" srcset="./img/catalog-unknown-768.jpg">
                   <source media="(max-width: 1024px)" srcset="./img/catalog-unknown-1024.jpg">
                   <img src="./img/catalog-unknown-1920.jpg" alt="Неизвестный деятель" aria-hidden="true">
                 </picture>
@@ -397,6 +403,7 @@
             <article class="bookmark bookmark--active" data-mark="ghirlandaio" id="ghirlandaio">
               <div class="bookmark__top">
                 <picture class="bookmark__img">
+                  <source media="(max-width: 768px)" srcset="./img/catalog-Ghirlandaio-768.jpg">
                   <source media="(max-width: 1024px)" srcset="./img/catalog-Ghirlandaio-1024.jpg">
                   <img src="./img/catalog-Ghirlandaio-1920.jpg" alt="Доменико Гирландайо">
                 </picture>
@@ -414,6 +421,7 @@
             <article class="bookmark" data-mark="granacci" id="granacci">
               <div class="bookmark__top">
                 <picture class="bookmark__img">
+                  <source media="(max-width: 768px)" srcset="./img/catalog-Granacci-768.jpg">
                   <source media="(max-width: 1024px)" srcset="./img/catalog-Granacci-1024.jpg">
                   <img src="./img/catalog-Granacci-1920.jpg" alt="Франческо Граначчи">
                 </picture>
@@ -431,6 +439,7 @@
             <article class="bookmark" data-mark="giovanni_di_paolo" id="giovanni_di_paolo">
               <div class="bookmark__top">
                 <picture class="bookmark__img">
+                  <source media="(max-width: 768px)" srcset="./img/catalog-Giovanni_di_Paolo-768.jpg">
                   <source media="(max-width: 1024px)" srcset="./img/catalog-Giovanni_di_Paolo-1024.jpg">
                   <img src="./img/catalog-Giovanni_di_Paolo-1920.jpg" alt="Джованни ди Паоло">
                 </picture>
@@ -448,6 +457,7 @@
             <article class="bookmark" data-mark="parentino" id="parentino">
               <div class="bookmark__top">
                 <picture class="bookmark__img">
+                  <source media="(max-width: 768px)" srcset="./img/catalog-Bernardo_Parentino-768.jpg">
                   <source media="(max-width: 1024px)" srcset="./img/catalog-Bernardo_Parentino-1024.jpg">
                   <img src="./img/catalog-Bernardo_Parentino-1920.jpg" alt="Бернардо Парентино">
                 </picture>
@@ -683,6 +693,7 @@
             <li class="events-slider__slide">
               <article class="article">
                 <picture class="article__img">
+                  <source media="(max-width: 992px)" srcset="./img/events-1-768.jpg">
                   <source media="(max-width: 1440px)" srcset="./img/events-1-1024.jpg">
                   <img src="./img/events-1-1920.jpg" alt="Книжная гравюра">
                 </picture>
@@ -690,7 +701,7 @@
                   <span class="article__place">Музей им. Щусева</span>
                   <span class="article__date">с&nbsp;20&nbsp;марта по&nbsp;30&nbsp;апреля</span>
                   <h3 class="article-title article__name">
-                    Книжная гравюра в&nbsp;живом восприятии
+                    Книжная гравюра в живом восприятии
                   </h3>
                   <p class="article__descr descr">
                     Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо.
@@ -702,6 +713,7 @@
             <li class="events-slider__slide">
               <article class="article">
                 <picture class="article__img">
+                  <source media="(max-width: 992px)" srcset="./img/events-2-768.jpg">
                   <source media="(max-width: 1440px)" srcset="./img/events-2-1024.jpg">
                   <img src="./img/events-2-1920.jpg" alt="Открытая дискуссия">
                 </picture>
@@ -721,6 +733,7 @@
             <li class="events-slider__slide">
               <article class="article">
                 <picture class="article__img">
+                  <source media="(max-width: 992px)" srcset="./img/events-3-768.jpg">
                   <source media="(max-width: 1440px)" srcset="./img/events-3-1024.jpg">
                   <img src="./img/events-3-1920.jpg" alt="Формация 2020">
                 </picture>
@@ -740,6 +753,7 @@
             <li class="events-slider__slide">
               <article class="article">
                 <picture class="article__img">
+                  <source media="(max-width: 992px)" srcset="./img/events-4-768.jpg">
                   <source media="(max-width: 1440px)" srcset="./img/events-4-1024.jpg">
                   <img src="./img/events-4-1920.jpg" alt="Метафора серебра">
                 </picture>
@@ -759,6 +773,7 @@
             <li class="events-slider__slide">
               <article class="article">
                 <picture class="article__img">
+                  <source media="(max-width: 992px)" srcset="./img/events-5-768.jpg">
                   <source media="(max-width: 1440px)" srcset="./img/events-5-1024.jpg">
                   <img src="./img/events-5-1920.jpg" alt="XXIV Международная биеннале молодого искусства">
                 </picture>
@@ -953,7 +968,8 @@
         <div class="footer__content">
           <a class="logo">
             <picture>
-              <img src="./img/logo-1920.svg" alt="Логотип Blanchard">
+              <source media="(max-width: 576px)" srcset="./img/logo-small.svg">
+              <img src="./img/logo-medium.svg" alt="Логотип Blanchard">
             </picture>
           </a>
           <ul class="social list-reset">
