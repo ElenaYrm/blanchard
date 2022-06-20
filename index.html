@@ -27,7 +27,7 @@
           </button>
           <a class="logo">
             <picture>
-              <source media="(max-width: 576px)" srcset="./img/logo-small.svg">
+              <source media="(max-width: 640px)" srcset="./img/logo-small.svg">
               <source media="(max-width: 1024px)" srcset="./img/logo-large.svg">
               <img src="./img/logo-medium.svg" alt="Логотип Blanchard">
             </picture>
@@ -61,21 +61,21 @@
             </a>
           </nav>
           <button class="loupe btn-reset" type="button" aria-label="Открыть окно поиска" aria-expanded="false">
-            <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg  viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z"/>
             </svg>
           </button>
           <form class="search" action="https://jsonplaceholder.typicode.com/posts" method="post">
             <button class="search__submit btn-reset" type="submit" aria-label="Кнопка поиска">
-              <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z"/>
               </svg>
             </button>
             <input class="search__request" type="text" name="search" aria-label="Введите запрос поиска" autocomplete="off">
             <button class="search__close btn-reset" type="button" aria-label="Закрыть окно поиска" aria-expanded="true">
-              <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="29.567" height="2.9567" transform="matrix(0.707093 0.707121 -0.707093 0.707121 2.09326 0)"/>
                 <rect width="29.567" height="2.9567" transform="matrix(0.707093 -0.707121 0.707093 0.707121 0 20.9075)"/>
               </svg>
@@ -323,6 +323,7 @@
               <div class="gallery-slider__wrapper">
                 <button class="gallery-slider__slide btn-reset" type="button" data-path="one">
                   <picture class="gallery-slider__img">
+                    <source media="(max-width: 640px)" srcset="./img/gallery-slide-1-320.jpg">
                     <source media="(max-width: 992px)" srcset="./img/gallery-slide-1-768.jpg">
                     <source media="(max-width: 1440px)" srcset="./img/gallery-slide-1-1024.jpg">
                     <img src="./img/gallery-slide-1-1920.jpg" alt="Казимир Малевич, Торс №2">
@@ -330,6 +331,7 @@
                 </button>
                 <button class="gallery-slider__slide btn-reset" type="button" data-path="two">
                   <picture class="gallery-slider__img">
+                    <source media="(max-width: 640px)" srcset="./img/gallery-slide-2-320.jpg">
                     <source media="(max-width: 992px)" srcset="./img/gallery-slide-2-768.jpg">
                     <source media="(max-width: 1440px)" srcset="./img/gallery-slide-2-1024.jpg">
                     <img src="./img/gallery-slide-2-1920.jpg" alt="Казимир Малевич, Женщина с&nbsp;граблями">
@@ -337,6 +339,7 @@
                 </button>
                 <button class="gallery-slider__slide btn-reset" type="button" data-path="three">
                   <picture class="gallery-slider__img">
+                    <source media="(max-width: 640px)" srcset="./img/gallery-slide-3-320.jpg">
                     <source media="(max-width: 992px)" srcset="./img/gallery-slide-3-768.jpg">
                     <source media="(max-width: 1440px)" srcset="./img/gallery-slide-3-1024.jpg">
                     <img src="./img/gallery-slide-3-1920.jpg" alt="Казимир Малевич, Уборка ржи">
@@ -344,6 +347,7 @@
                 </button>
                 <button class="gallery-slider__slide btn-reset" type="button" data-path="four">
                   <picture class="gallery-slider__img">
+                    <source media="(max-width: 640px)" srcset="./img/gallery-slide-4-320.jpg">
                     <source media="(max-width: 992px)" srcset="./img/gallery-slide-4-768.jpg">
                     <source media="(max-width: 1440px)" srcset="./img/gallery-slide-4-1024.jpg">
                     <img src="./img/gallery-slide-4-1920.jpg" alt="Иван Клюн, Суперматизм">
@@ -351,6 +355,7 @@
                 </button>
                 <button class="gallery-slider__slide btn-reset" type="button" data-path="five">
                   <picture class="gallery-slider__img">
+                    <source media="(max-width: 640px)" srcset="./img/gallery-slide-5-320.jpg">
                     <source media="(max-width: 992px)" srcset="./img/gallery-slide-5-768.jpg">
                     <source media="(max-width: 1440px)" srcset="./img/gallery-slide-5-1024.jpg">
                     <img src="./img/gallery-slide-5-1920.jpg" alt="Казимир Малевич, Женщина с&nbsp;ведрами">
@@ -358,6 +363,7 @@
                 </button>
                 <button class="gallery-slider__slide btn-reset" type="button" data-path="six">
                   <picture class="gallery-slider__img">
+                    <source media="(max-width: 640px)" srcset="./img/gallery-slide-6-320.jpg">
                     <source media="(max-width: 992px)" srcset="./img/gallery-slide-6-768.jpg">
                     <source media="(max-width: 1440px)" srcset="./img/gallery-slide-6-1024.jpg">
                     <img src="./img/gallery-slide-6-1920.jpg" alt="Казимир Малевич, Суперматизм">
@@ -383,6 +389,7 @@
             <article class="bookmark" data-mark="unknown" id="unknown">
               <div class="bookmark__top">
                 <picture class="bookmark__img">
+                  <source media="(max-width: 640px)" srcset="./img/catalog-unknown-320.jpg">
                   <source media="(max-width: 768px)" srcset="./img/catalog-unknown-768.jpg">
                   <source media="(max-width: 1024px)" srcset="./img/catalog-unknown-1024.jpg">
                   <img src="./img/catalog-unknown-1920.jpg" alt="Неизвестный деятель" aria-hidden="true">
@@ -403,6 +410,7 @@
             <article class="bookmark bookmark--active" data-mark="ghirlandaio" id="ghirlandaio">
               <div class="bookmark__top">
                 <picture class="bookmark__img">
+                  <source media="(max-width: 640px)" srcset="./img/catalog-Ghirlandaio-320.jpg">
                   <source media="(max-width: 768px)" srcset="./img/catalog-Ghirlandaio-768.jpg">
                   <source media="(max-width: 1024px)" srcset="./img/catalog-Ghirlandaio-1024.jpg">
                   <img src="./img/catalog-Ghirlandaio-1920.jpg" alt="Доменико Гирландайо">
@@ -421,6 +429,7 @@
             <article class="bookmark" data-mark="granacci" id="granacci">
               <div class="bookmark__top">
                 <picture class="bookmark__img">
+                  <source media="(max-width: 640px)" srcset="./img/catalog-Granacci-320.jpg">
                   <source media="(max-width: 768px)" srcset="./img/catalog-Granacci-768.jpg">
                   <source media="(max-width: 1024px)" srcset="./img/catalog-Granacci-1024.jpg">
                   <img src="./img/catalog-Granacci-1920.jpg" alt="Франческо Граначчи">
@@ -439,6 +448,7 @@
             <article class="bookmark" data-mark="giovanni_di_paolo" id="giovanni_di_paolo">
               <div class="bookmark__top">
                 <picture class="bookmark__img">
+                  <source media="(max-width: 640px)" srcset="./img/catalog-Giovanni_di_Paolo-320.jpg">
                   <source media="(max-width: 768px)" srcset="./img/catalog-Giovanni_di_Paolo-768.jpg">
                   <source media="(max-width: 1024px)" srcset="./img/catalog-Giovanni_di_Paolo-1024.jpg">
                   <img src="./img/catalog-Giovanni_di_Paolo-1920.jpg" alt="Джованни ди Паоло">
@@ -457,6 +467,7 @@
             <article class="bookmark" data-mark="parentino" id="parentino">
               <div class="bookmark__top">
                 <picture class="bookmark__img">
+                  <source media="(max-width: 640px)" srcset="./img/catalog-Bernardo_Parentino-320.jpg">
                   <source media="(max-width: 768px)" srcset="./img/catalog-Bernardo_Parentino-768.jpg">
                   <source media="(max-width: 1024px)" srcset="./img/catalog-Bernardo_Parentino-1024.jpg">
                   <img src="./img/catalog-Bernardo_Parentino-1920.jpg" alt="Бернардо Парентино">
@@ -693,6 +704,7 @@
             <li class="events-slider__slide">
               <article class="article">
                 <picture class="article__img">
+                  <source media="(max-width: 640px)" srcset="./img/events-1-320.jpg">
                   <source media="(max-width: 992px)" srcset="./img/events-1-768.jpg">
                   <source media="(max-width: 1440px)" srcset="./img/events-1-1024.jpg">
                   <img src="./img/events-1-1920.jpg" alt="Книжная гравюра">
@@ -713,6 +725,7 @@
             <li class="events-slider__slide">
               <article class="article">
                 <picture class="article__img">
+                  <source media="(max-width: 640px)" srcset="./img/events-2-320.jpg">
                   <source media="(max-width: 992px)" srcset="./img/events-2-768.jpg">
                   <source media="(max-width: 1440px)" srcset="./img/events-2-1024.jpg">
                   <img src="./img/events-2-1920.jpg" alt="Открытая дискуссия">
@@ -733,6 +746,7 @@
             <li class="events-slider__slide">
               <article class="article">
                 <picture class="article__img">
+                  <source media="(max-width: 640px)" srcset="./img/events-3-320.jpg">
                   <source media="(max-width: 992px)" srcset="./img/events-3-768.jpg">
                   <source media="(max-width: 1440px)" srcset="./img/events-3-1024.jpg">
                   <img src="./img/events-3-1920.jpg" alt="Формация 2020">
@@ -753,6 +767,7 @@
             <li class="events-slider__slide">
               <article class="article">
                 <picture class="article__img">
+                  <source media="(max-width: 640px)" srcset="./img/events-4-320.jpg">
                   <source media="(max-width: 992px)" srcset="./img/events-4-768.jpg">
                   <source media="(max-width: 1440px)" srcset="./img/events-4-1024.jpg">
                   <img src="./img/events-4-1920.jpg" alt="Метафора серебра">
@@ -773,6 +788,7 @@
             <li class="events-slider__slide">
               <article class="article">
                 <picture class="article__img">
+                  <source media="(max-width: 640px)" srcset="./img/events-5-320.jpg">
                   <source media="(max-width: 992px)" srcset="./img/events-5-768.jpg">
                   <source media="(max-width: 1440px)" srcset="./img/events-5-1024.jpg">
                   <img src="./img/events-5-1920.jpg" alt="XXIV Международная биеннале молодого искусства">
@@ -803,7 +819,7 @@
           Проекты
         </h2>
         <p class="descr projects__descr">
-          Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые государства смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости, из-за чего возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистское
+          Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые государства смешаны с&nbsp;не уникальными данными до&nbsp;степени совершенной неузнаваемости, из-за чего возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистское
           <button class="projects__tooltip btn-reset" data-tippy-content="Пример современных тенденций&nbsp;&mdash; современная методология разработки">i</button> обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И&nbsp;нет сомнений, что действия представителей оппозиции могут быть рассмотрены
           <button class="projects__tooltip btn-reset" data-tippy-content="Приятно, граждане, наблюдать, как сделанные на&nbsp;базе аналитики выводы вызывают у&nbsp;вас эмоции">i</button> исключительно в&nbsp;разрезе маркетинговых и&nbsp;финансовых
           <button class="projects__tooltip btn-reset" data-tippy-content="В&nbsp;стремлении повысить качество">i</button> предпосылок. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также представители современных социальных резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости.
@@ -924,14 +940,17 @@
                   </label>
                 </div>
               </div>
-              <button class="form__btn btn-reset" type="submit" id="submit-btn">Заказать обратный звонок</button>
+              <button class="form__btn btn-reset" type="submit" id="submit-btn">
+                <span class="form__btn--full">Заказать обратный звонок</span>
+                <span class="form__btn--short">Заказать</span>
+              </button>
             </form>
             <div class="public">
               <h3 class="public__title article-title">Связаться в&nbsp;один клик</h3>
               <ul class="public__list list-reset">
                 <li class="public__item">
                   <a href="#" class="public__link">
-                    <svg class="public__icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="public__icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M20 39.375C30.7005 39.375 39.375 30.7005 39.375 20C39.375 9.29948 30.7005 0.625 20 0.625C9.29948 0.625 0.625 9.29948 0.625 20C0.625 30.7005 9.29948 39.375 20 39.375Z" fill="#30BF39"/>
                       <path d="M25.8749 21.751C25.6249 21.626 24.3124 20.876 24.0624 20.8135C23.8124 20.6885 23.6249 20.6885 23.4374 20.9385C23.2499 21.1885 22.6874 21.8135 22.5624 21.9385C22.3749 22.126 22.2499 22.126 21.9999 22.001C21.7499 21.876 20.8749 21.5635 19.8749 20.5635C19.1249 19.8135 18.5624 18.9385 18.4374 18.626C18.3124 18.376 18.4374 18.1885 18.5624 18.0635C18.6874 17.9385 18.8124 17.751 18.9999 17.626C19.1874 17.501 19.1874 17.376 19.3124 17.1885C19.4374 17.001 19.3749 16.876 19.3124 16.6885C19.2499 16.501 18.7499 15.1885 18.5624 14.626C18.3749 14.0635 18.1249 14.1885 17.9999 14.126C17.8124 14.126 17.6874 14.0635 17.4999 14.0635C17.2499 14.0635 16.9374 14.1885 16.7499 14.376C16.4999 14.626 15.7499 15.251 15.7499 16.5635C15.7499 17.876 16.6249 19.251 16.7499 19.376C16.8749 19.5635 18.4999 22.4385 21.1874 23.626C23.8749 24.8135 23.8749 24.4385 24.3749 24.4385C24.8749 24.4385 25.9999 23.8135 26.2499 23.251C26.4999 22.626 26.4999 22.0635 26.4374 22.001C26.3124 22.001 26.1249 21.9385 25.8749 21.751ZM20.8749 28.1885C19.1249 28.1885 17.4999 27.6885 16.0624 26.751L12.6874 27.8135L13.8124 24.5635C12.7499 23.0635 12.1249 21.251 12.1249 19.376C12.1249 14.501 16.0624 10.5635 20.9374 10.5635C25.8124 10.5635 29.6874 14.501 29.6874 19.376C29.6874 24.251 25.7499 28.1885 20.8749 28.1885ZM20.8749 8.81348C15.0624 8.81348 10.3124 13.5635 10.3124 19.376C10.3124 21.3135 10.8124 23.1885 11.8124 24.8135L9.87489 30.501L15.7499 28.626C17.3124 29.501 19.0624 29.9385 20.8749 29.9385C26.6874 29.9385 31.4374 25.1885 31.4374 19.376C31.4374 13.5635 26.7499 8.81348 20.8749 8.81348Z" fill="white"/>
                     </svg>
@@ -939,7 +958,7 @@
                 </li>
                 <li class="public__item">
                   <a href="#" class="public__link">
-                    <svg class="public__icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="public__icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40Z" fill="url(#paint0_linear_136320_63)"/>
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M9.05312 19.7889L20.7167 14.7649C26.271 12.4547 27.425 12.0534 28.1773 12.0402C28.3428 12.0373 28.7127 12.0783 28.9523 12.2727C29.1547 12.4369 29.2103 12.6587 29.237 12.8143C29.2636 12.9699 29.2968 13.3246 29.2704 13.6017C28.9694 16.7641 27.667 24.4386 27.0045 27.9806C26.7241 29.4794 26.1725 29.9819 25.6377 30.0311C24.4762 30.138 23.5943 29.2635 22.4694 28.5261L18.006 25.528C16.0314 24.2268 17.3114 23.5116 18.4368 22.3428C18.7313 22.0368 23.8486 17.3823 23.9476 16.96C23.9596 16.9072 23.9715 16.7104 23.8546 16.6064C23.7376 16.5024 23.565 16.5384 23.4404 16.5663C23.2639 16.6064 20.4519 18.465 15.0044 22.1423C14.2062 22.6904 13.4832 22.9575 12.8354 22.9435C12.1213 22.9281 10.7477 22.5397 9.72652 22.2078C8.474 21.8007 7.47852 21.5854 7.56524 20.8939C7.61036 20.5338 8.10632 20.1655 9.05308 19.789L9.05312 19.7889Z" fill="white"/>
                       <defs>
@@ -1007,7 +1026,9 @@
       <li class="modal__item" data-gallery="one">
         <article class="note">
           <picture class="note__img">
-            <source media="(max-width: 1024px)" srcset="./img/modal-1-1024.jpg">
+            <source media="(max-width: 640px)" srcset="./img/modal-1-320.jpg">
+            <source media="(max-width: 992px)" srcset="./img/modal-1-768.jpg">
+            <source media="(max-width: 1440px)" srcset="./img/modal-1-1024.jpg">
             <img src="./img/modal-1-1920.jpg" alt="Казимир Малевич, Торс №2">
           </picture>
           <div class="note__right">
@@ -1024,7 +1045,9 @@
       <li class="modal__item" data-gallery="two">
         <article class="note">
           <picture class="note__img">
-            <source media="(max-width: 1024px)" srcset="./img/modal-2-1024.jpg">
+            <source media="(max-width: 640px)" srcset="./img/modal-2-320.jpg">
+            <source media="(max-width: 992px)" srcset="./img/modal-2-768.jpg">
+            <source media="(max-width: 1440px)" srcset="./img/modal-2-1024.jpg">
             <img src="./img/modal-2-1920.jpg" alt="Казимир Малевич, Женщина с&nbsp;граблями">
           </picture>
           <div class="note__right">
@@ -1041,6 +1064,9 @@
       <li class="modal__item" data-gallery="three">
         <article class="note">
           <picture class="note__img">
+            <source media="(max-width: 640px)" srcset="./img/modal-3-320.jpg">
+            <source media="(max-width: 992px)" srcset="./img/modal-3-768.jpg">
+            <source media="(max-width: 1440px)" srcset="./img/modal-3-1024.jpg">
             <img src="./img/modal-3-1920.jpg" alt="Казимир Малевич, Уборка ржи">
           </picture>
           <div class="note__right">
@@ -1057,6 +1083,9 @@
       <li class="modal__item" data-gallery="four">
         <article class="note">
           <picture class="note__img">
+            <source media="(max-width: 640px)" srcset="./img/modal-4-320.jpg">
+            <source media="(max-width: 992px)" srcset="./img/modal-4-768.jpg">
+            <source media="(max-width: 1440px)" srcset="./img/modal-4-1024.jpg">
             <img src="./img/modal-4-1920.jpg" alt="Иван Клюн, Суперматизм">
           </picture>
           <div class="note__right">
@@ -1073,6 +1102,9 @@
       <li class="modal__item" data-gallery="five">
         <article class="note">
           <picture class="note__img">
+            <source media="(max-width: 640px)" srcset="./img/modal-5-320.jpg">
+            <source media="(max-width: 992px)" srcset="./img/modal-5-768.jpg">
+            <source media="(max-width: 1440px)" srcset="./img/modal-5-1024.jpg">
             <img src="./img/modal-5-1920.jpg" alt="Казимир Малевич, Женщина с&nbsp;ведрами">
           </picture>
           <div class="note__right">
@@ -1089,6 +1121,9 @@
       <li class="modal__item" data-gallery="six">
         <article class="note">
           <picture class="note__img">
+            <source media="(max-width: 640px)" srcset="./img/modal-6-320.jpg">
+            <source media="(max-width: 992px)" srcset="./img/modal-6-768.jpg">
+            <source media="(max-width: 1440px)" srcset="./img/modal-6-1024.jpg">
             <img src="./img/modal-6-1920.jpg" alt="Казимир Малевич, Суперматизм">
           </picture>
           <div class="note__right">

@@ -129,7 +129,7 @@ let gallerySwiper = new Swiper('.gallery-slider', {
 
 
   breakpoints: {
-    576: {
+    480: {
       slidesPerView: 2,
       spaceBetween: 40,
       slidesPerGroup: 2,
@@ -234,7 +234,7 @@ let eventsSwiper = new Swiper('.events-slider', {
   slidesPerGroup: 1,
 
   breakpoints: {
-    576: {
+    640: {
       slidesPerView: 2,
       spaceBetween: 35,
       slidesPerGroup: 2,
