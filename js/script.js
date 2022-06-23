@@ -40,9 +40,21 @@ closeBtn.addEventListener('click', function () {
   inputSearch.classList.remove('search--active');
 })
 
+// dropdown scroll
+const bars = document.querySelectorAll('[data-simplebar]')
+
+bars.forEach(el => {
+  new SimpleBar(el, {
+    ariaLabel: 'Прокручиваемая область',
+  });
+  el.querySelector('.simplebar-content-wrapper').setAttribute('tabindex', '-1');
+});
+
 // header-bottom dropdown
 const menuBtn = document.querySelectorAll('.tab');
 const drops = document.querySelectorAll('.dropdown');
+
+
 
 menuBtn.forEach(function (btn) {
   btn.addEventListener('click', function (e) {
@@ -118,15 +130,9 @@ let gallerySwiper = new Swiper('.gallery-slider', {
     prevEl: '.gallery-nav__bnt-prev',
   },
 
-  a11y: {
-    prevSlideMessage: 'Предыдущая картина',
-    nextSlideMessage: 'Следующая картина',
-  },
-
   slidesPerView: 1,
   spaceBetween: 20,
   slidesPerGroup: 1,
-
 
   breakpoints: {
     480: {
@@ -145,6 +151,42 @@ let gallerySwiper = new Swiper('.gallery-slider', {
       slidesPerView: 3,
       spaceBetween: 50,
       slidesPerGroup: 3,
+    },
+  },
+
+  a11y: {
+    prevSlideMessage: 'Предыдущие картины',
+    nextSlideMessage: 'Следующие картины',
+    slideLabelMessage: '{{index}} из {{slidesLength}}',
+  },
+
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+
+  watchSlidesProgress:true,
+  slideVisibleClass: 'swiper-slide-visible',
+  on: {
+    init: function () {
+      this.slides.forEach(function (slide) {
+        if (!slide.classList.contains("swiper-slide-visible")) {
+          slide.tabIndex = "-1";
+        }
+        else {
+          slide.tabIndex = "";
+        }
+      })
+    },
+    slideChange: function () {
+      this.slides.forEach(function (slide) {
+        if (!slide.classList.contains("swiper-slide-visible")) {
+          slide.tabIndex = "-1";
+        }
+        else {
+          slide.tabIndex = "";
+        }
+      })
     },
   },
 })
@@ -224,11 +266,6 @@ let eventsSwiper = new Swiper('.events-slider', {
     clickable: true,
   },
 
-  a11y: {
-    prevSlideMessage: 'Предыдущее событие',
-    nextSlideMessage: 'Следующее событие',
-  },
-
   slidesPerView: 1,
   spaceBetween: 20,
   slidesPerGroup: 1,
@@ -252,6 +289,49 @@ let eventsSwiper = new Swiper('.events-slider', {
       slidesPerGroup: 3,
     },
   },
+
+  a11y: {
+    prevSlideMessage: 'Предыдущие события',
+    nextSlideMessage: 'Следующие события',
+    slideLabelMessage: '{{index}} из {{slidesLength}}',
+    paginationBulletMessage: 'Перейти к событиям {{index}}',
+  },
+
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+
+  watchSlidesProgress:true,
+  slideVisibleClass: 'swiper-slide-visible',
+  on: {
+    init: function () {
+      this.slides.forEach(function (slide) {
+        let slideLinks = slide.querySelector('.article__link');
+        if (!slide.classList.contains("swiper-slide-visible")) {
+          slide.tabIndex = "-1";
+          slideLinks.tabIndex = "-1";
+        }
+        else {
+          slide.tabIndex = "";
+          slideLinks.tabIndex = "";
+        }
+      })
+    },
+    slideChange: function () {
+      this.slides.forEach(function (slide) {
+        let slideLinks = slide.querySelector('.article__link');
+        if (!slide.classList.contains("swiper-slide-visible")) {
+          slide.tabIndex = "-1";
+          slideLinks.tabIndex = "-1";
+        }
+        else {
+          slide.tabIndex = "";
+          slideLinks.tabIndex = "";
+        }
+      })
+    },
+  },
 })
 
 // projects tooltip
@@ -268,11 +348,6 @@ let projectsSwiper = new Swiper('.projects-slider', {
   navigation: {
     nextEl: '.projects__btn-next',
     prevEl: '.projects__btn-prev',
-  },
-
-  a11y: {
-    prevSlideMessage: 'Предыдущее событие',
-    nextSlideMessage: 'Следующее событие',
   },
 
   slidesPerView: 1,
@@ -296,6 +371,46 @@ let projectsSwiper = new Swiper('.projects-slider', {
       slidesPerView: 3,
       spaceBetween: 50,
       slidesPerGroup: 3,
+    },
+  },
+
+  a11y: {
+    prevSlideMessage: 'Предыдущие партнеры',
+    nextSlideMessage: 'Следующие партнеры',
+    slideLabelMessage: '{{index}} из {{slidesLength}}',
+  },
+
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+
+  watchSlidesProgress:true,
+  slideVisibleClass: 'swiper-slide-visible',
+  on: {
+    init: function () {
+      this.slides.forEach(function (slide) {
+        slide.tabIndex = "-1";
+        let slideLink = slide.querySelector('.projects-slider__link');
+        if (!slide.classList.contains("swiper-slide-visible")) {
+          slideLink.tabIndex = "-1";
+          }
+        else {
+          slideLink.tabIndex = "";
+        }
+      })
+    },
+    slideChange: function () {
+      this.slides.forEach(function (slide) {
+        slide.tabIndex = "-1";
+        let slideLink = slide.childNodes;
+        if (!slide.classList.contains("swiper-slide-visible")) {
+          slideLink.tabIndex = "-1";
+        }
+        else {
+          slideLink.tabIndex = "";
+        }
+      })
     },
   },
 })

@@ -1683,6 +1683,10 @@ body {
   background-color: var(--color-white);
 }
 
+.events-slider__slide:focus .article__bottom {
+  border-color: var(--color-purple);
+}
+
 .article {
   position: relative;
   height: 100%;
@@ -1696,6 +1700,7 @@ body {
   height: 100%;
   border: 1px solid var(--color-silver);
   padding: 62% 50px 43px;
+  transition: border-color 0.3s ease-in-out;
 }
 
 .article__img {
