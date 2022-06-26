@@ -1,4 +1,3 @@
-// header-top burger
 // set root for nav--active and hero
 document.addEventListener("DOMContentLoaded", ResizeHeight);
 window.addEventListener('resize', ResizeHeight);
