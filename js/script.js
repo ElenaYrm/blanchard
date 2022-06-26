@@ -1,7 +1,17 @@
 // header-top burger
-// set root for nav--active
-let headerTopHeight = document.querySelector('.header-top').offsetHeight;
-document.querySelector(':root').style.setProperty('--header-top-height', `${headerTopHeight}px`);
+// set root for nav--active and hero
+document.addEventListener("DOMContentLoaded", ResizeHeight);
+window.addEventListener('resize', ResizeHeight);
+
+function ResizeHeight() {
+  let headerTop = document.querySelector('.header-top');
+  let headerTopHeight = headerTop.offsetHeight;
+  document.querySelector(':root').style.setProperty('--header-top-height', `${headerTopHeight}px`);
+
+  let headerBottom = document.querySelector('.header-bottom');
+  let headerBottomHeight = headerBottom.offsetHeight;
+  document.querySelector(':root').style.setProperty('--header-bottom-height', `${headerBottomHeight}px`);
+}
 
 // burger events
 let burger = document.querySelector('.burger');
@@ -53,8 +63,6 @@ bars.forEach(el => {
 // header-bottom dropdown
 const menuBtn = document.querySelectorAll('.tab');
 const drops = document.querySelectorAll('.dropdown');
-
-
 
 menuBtn.forEach(function (btn) {
   btn.addEventListener('click', function (e) {
@@ -199,6 +207,8 @@ const exitBtn = document.querySelectorAll('.note__btn');
 
 btn.forEach(function (element) {
   element.addEventListener('click', function (e) {
+    document.body.classList.toggle('stop-scroll');
+
    let path = e.currentTarget.getAttribute('data-path');
 
    notes.forEach(function (el) {
@@ -212,9 +222,30 @@ btn.forEach(function (element) {
 
 exitBtn.forEach(function (btn) {
   btn.addEventListener('click', function () {
+    document.body.classList.remove('stop-scroll');
     modal.classList.remove('modal__list--active');
     notes.classList.remove('modal__item--active');
   })
+})
+
+modal.addEventListener('click', function (el){
+  if (el.target === modal) {
+    notes.forEach(function (el) {
+      el.classList.remove('modal__item--active');
+    })
+    document.body.classList.remove('stop-scroll');
+    modal.classList.remove('modal__list--active');
+  }
+})
+
+document.addEventListener('keydown', function (e){
+  if (e.key === 'Escape') {
+    notes.forEach(function (el) {
+      el.classList.remove('modal__item--active');
+    })
+    document.body.classList.remove('stop-scroll');
+    modal.classList.remove('modal__list--active');
+  }
 })
 
 // catalog accordion
@@ -250,6 +281,29 @@ tabsBtn.forEach(function (element) {
   });
 });
 
+// set href for artist on screen <= 992px
+window.onload = function () {
+  tabsBtn.forEach(function (btn){
+    Way(btn)
+  })
+};
+
+window.addEventListener('resize',function (){
+  tabsBtn.forEach(function (btn){
+    Way(btn)
+  })
+});
+
+function Way(el) {
+  if (window.outerWidth <= 992) {
+    let test = el.getAttribute('data-way')
+    el.href = "#" + test
+  }
+  else {
+    el.removeAttribute('href')
+  }
+}
+
 // events swiper
 let eventsSwiper = new Swiper('.events-slider', {
   wrapperClass: 'events-slider__wrapper',
@@ -269,6 +323,7 @@ let eventsSwiper = new Swiper('.events-slider', {
   slidesPerView: 1,
   spaceBetween: 20,
   slidesPerGroup: 1,
+
 
   breakpoints: {
     640: {
@@ -457,7 +512,6 @@ new window.JustValidate('.form', {
   colorWrong: '#D11616',
 
   submitHandler: function (thisForm, values, ajax) {
-
     ajax({
       url: 'https://jsonplaceholder.typicode.com/posts',
       method: 'POST',
@@ -482,18 +536,18 @@ function init(){
     {
       center: center,
       zoom: 14,
-      controls: ['geolocationControl', 'zoomControl']
+      controls: ['geolocationControl', 'zoomControl'],
+      autoFitToViewport: 'always',
     },
     {
       geolocationControlSize: "large",
-      geolocationControlPosition:  { top: "330px", right: "20px" },
+      geolocationControlPosition:  { top: "280px", right: "20px" },
       geolocationControlFloat: 'none',
       zoomControlSize: "small",
       zoomControlFloat: "none",
-      zoomControlPosition: { top: "250px", right: "20px" }
+      zoomControlPosition: { top: "200px", right: "20px" }
     }
   );
-
 
   let newPlacemark = new ymaps.Placemark(center, {}, {
     iconLayout: 'default#image',
@@ -504,5 +558,6 @@ function init(){
 
   yandexMap.geoObjects.add(newPlacemark);
   yandexMap.behaviors.disable(['scrollZoom']);
+  yandexMap.behaviors.disable('drag');
   yandexMap.container.fitToViewport();
 }
