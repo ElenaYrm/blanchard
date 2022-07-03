@@ -208,14 +208,17 @@ btn.forEach(function (element) {
   element.addEventListener('click', function (e) {
     document.body.classList.toggle('stop-scroll');
 
-   let path = e.currentTarget.getAttribute('data-path');
+    let path = e.currentTarget.getAttribute('data-path');
 
-   notes.forEach(function (el) {
+    notes.forEach(function (el) {
      el.classList.remove('modal__item--active');
-   })
+    })
 
-   document.querySelector(`[data-gallery="${path}"]`).classList.add('modal__item--active');
-   modal.classList.add('modal__list--active');
+    document.querySelector(`[data-gallery="${path}"]`).classList.add('modal__item--active');
+    modal.classList.add('modal__list--active');
+
+    let activeModal = document.querySelector('.modal__item--active');
+    activeModal.querySelector('.note__btn').focus();
   });
 });
 
