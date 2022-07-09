@@ -217,8 +217,10 @@ btn.forEach(function (element) {
     document.querySelector(`[data-gallery="${path}"]`).classList.add('modal__item--active');
     modal.classList.add('modal__list--active');
 
-    let activeModal = document.querySelector('.modal__item--active');
-    activeModal.querySelector('.note__btn').focus();
+    setTimeout(function() {
+      let activeModal = document.querySelector('.modal__item--active');
+      activeModal.querySelector('.note__btn').focus();
+    }, 100);
   });
 });
 
@@ -302,7 +304,8 @@ function Way(el) {
     el.href = "#" + test
   }
   else {
-    el.removeAttribute('href')
+    el.removeAttribute('href');
+    el.setAttribute('tabindex', '0');
   }
 }
 

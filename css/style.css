@@ -1013,7 +1013,7 @@ body {
   padding: 2px 16px;
 }
 
-.is-active .choices__placeholder {
+.is-active .is-selected {
   display: none;
 }
 
